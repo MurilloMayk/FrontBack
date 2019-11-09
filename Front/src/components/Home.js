@@ -1,4 +1,25 @@
 import React, { Component } from 'react';
+import HomeCard from './HomeCard';
+
+const data = [
+    {
+        title:'P0987-PRIME EXPERIENCE JIU JITSU 2019 - EDICAO', 
+        image: 'card3.jpg',
+        text:'Data do Evento: 07/09/2019',     
+    },
+    {
+        title:'P0987-PRIME EXPERIENCE JIU JITSU 2019 - EDICAO', 
+        image: 'card2.jpg',
+        text:'Data do Evento: 07/09/2019',     
+    },
+    {
+        title:'P0987-PRIME EXPERIENCE JIU JITSU 2019 - EDICAO', 
+        image: 'card1.jpg',
+        text:'Data do Evento: 07/09/2019',     
+    }
+];
+
+
 
 export class Home extends Component {
     render() {
@@ -36,69 +57,10 @@ export class Home extends Component {
                             <div className="conteudo">
                                 <h2 className="titulo-pg-ini">Competições em Destaque</h2>
                             </div>
-
                             <div className="row">
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card1.jpg'} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P1038-COPA PRIME DE JIU-JITSU 7 - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 13/09/2019 até 15/09/2019</p>
-                                            <a href="/Infocamp" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card2.jpg'} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P0946-PAN AMERICANO JIU-JITSU 1º - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 08/09/2019</p>
-                                            <a href="#" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card3.jpg'} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P0987-PRIME EXPERIENCE JIU JITSU 2019 - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 07/09/2019</p>
-                                            <a href="#" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card1.jpg'} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P1038-COPA PRIME DE JIU-JITSU 7 - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 13/09/2019 até 15/09/2019</p>
-                                            <a href="#" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card2.jpg'} className="card-img-top" alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P0946-PAN AMERICANO JIU-JITSU 1º - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 08/09/2019</p>
-                                            <a href="#" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card" >
-                                        <img src={process.env.PUBLIC_URL + '/img/card3.jpg'} alt="..." />
-                                        <div className="card-body">
-                                            <h5 className="card-title">P0987-PRIME EXPERIENCE JIU JITSU 2019 - EDICAO </h5>
-                                            <p className="card-text">Data do Evento: 07/09/2019</p>
-                                            <a href="#" className="btn btn-primary">Veja mais...</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            {data.map( card => <HomeCard image={card.image} title={card.title} text={card.text}  /> )}
                             </div>
+                           
                         </div>
                     </div>
                 </div>
